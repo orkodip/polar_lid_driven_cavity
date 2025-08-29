@@ -1,18 +1,18 @@
 /*
 SOLUTION OF NAVIER STOKES EQUATION IN POLAR COORDINATES (R-TH)
-CONSERVATIVE FINITE DIFFERENCE DISCRETIZATION TECHNIQUE IN SEMI-COLOCATED GRID
+FINITE VOLUME DISCRETIZATION TECHNIQUE IN COLOCATED GRID
 USING BALANCED FORCE PROJECTION ALGORITHM
 THE ADVECTION SCHEME IS QUICK + FIRST ORDER UPWIND
-FDQGMRES OR BI-CGSTAB CAN BE USED TO SOLVE THE LINEAR SYSTEMS
+FDQGMRES OR BICGSTAB CAN BE USED TO SOLVE THE LINEAR SYSTEMS
 */
 #include<iostream>
 #include<fstream>
 #include<cmath>
 #include<string>
 #include<csignal>
-#define EPS 1e-6	//DO NOT CHANGE THESE TWO CONSTANTS
+#define EPS 1e-6
 #define SMALL 1e-8
-#define TOL 1e-6	//convergence criteria for FDQGMRES solver
+#define TOL 1e-6	//convergence criteria for Poisson solver
 using namespace std;
 int LC=1;	//loop condition
 void control(int n)	//signal control function
